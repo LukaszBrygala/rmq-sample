@@ -1,0 +1,22 @@
+{
+  "name": "rmq-sample",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "docker-compose build && docker-compose up -d",
+    "stop": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "logs:producer": "docker logs -f rmq-sample_producer_1",
+    "logs:consumer": "docker logs -f rmq-sample_consumer_1",
+    "test": "jest",
+    "format": "prettier --write './**/*.js'"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "bunyan": "^1.8.12",
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2"
+  }
+}
